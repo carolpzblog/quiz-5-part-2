@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+int find_threes (int repeat, int number[]){
+  int s=0;
+  float cond=0;
+  for (int i=0; i<repeat; i++){
+    cond=number[i]%3;
+      if (cond==0){
+        s=s+number[i];
+    }
+  }
+  return s;
+}
+
+int main(){
+  int num;
+  cout<< "dime cuantos numeros quieres"<<endl;
+  cin>> num;
+  int n[num];
+  for (int i=0; i<num; i++){
+    cout<<"dame un numero"<<endl;
+    cin>>n[i];
+  }
+  int sum=find_threes(num, n);
+  cout<< "el total es "<< sum << endl;
+  return 0;
+}
